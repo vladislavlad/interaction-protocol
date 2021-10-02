@@ -1,6 +1,4 @@
 .gradle
-gradle
-gradlew*
 .idea
 build
 .DS_Store
