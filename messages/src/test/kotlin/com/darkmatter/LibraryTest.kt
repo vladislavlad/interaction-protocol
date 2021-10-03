@@ -1,6 +1,6 @@
-package com.intex
+package com.darkmatter
 
-import com.intex.model.SystemEvent
+import com.darkmatter.model.SystemEvent
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
 import java.util.*

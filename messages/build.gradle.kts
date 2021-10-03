@@ -3,9 +3,10 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     id("org.jetbrains.kotlin.jvm") version "1.5.0"
     `java-library`
+    `maven-publish`
 }
 
-group = "com.intex"
+group = "com.darkmatter"
 version = "0.0.1"
 java.sourceCompatibility = JavaVersion.VERSION_11
 
@@ -21,6 +22,20 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     testImplementation("io.kotest:kotest-runner-junit5:$kotestVersion")
     testImplementation("io.kotest:kotest-assertions-core:$kotestVersion")
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            artifactId = "${rootProject.name}-${project.name}"
+            from(components["java"])
+        }
+    }
+    repositories {
+        maven {
+            url = uri("https://maven.pkg.github.com/vladislavlad/interaction-protocol")
+        }
+    }
 }
 
 tasks.withType<KotlinCompile> {

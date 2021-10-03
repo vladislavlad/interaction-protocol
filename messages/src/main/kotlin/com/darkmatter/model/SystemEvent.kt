@@ -1,4 +1,4 @@
-package com.intex.model
+package com.darkmatter.model
 
 import java.util.*
 
