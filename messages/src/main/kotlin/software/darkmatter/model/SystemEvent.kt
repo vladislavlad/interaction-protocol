@@ -1,6 +1,6 @@
-package com.darkmatter.model
+package software.darkmatter.model
 
-import java.util.*
+import java.util.UUID
 
 data class SystemEvent(
     val id: UUID,

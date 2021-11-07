@@ -1,4 +1,4 @@
-package com.darkmatter
+package software.darkmatter
 
 class Library {
 

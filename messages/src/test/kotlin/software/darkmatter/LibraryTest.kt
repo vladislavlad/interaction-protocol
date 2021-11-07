@@ -1,6 +1,6 @@
-package com.darkmatter
+package software.darkmatter
 
-import com.darkmatter.model.SystemEvent
+import software.darkmatter.model.SystemEvent
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
 import java.util.*

@@ -1,12 +1,12 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id("org.jetbrains.kotlin.jvm") version "1.5.0"
+    kotlin("jvm") version "1.5.31"
     `java-library`
     `maven-publish`
 }
 
-group = "com.darkmatter"
+group = "software.darkmatter"
 version = "0.0.1"
 java.sourceCompatibility = JavaVersion.VERSION_11
 
