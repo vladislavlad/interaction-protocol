@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.5.31"
+    kotlin("jvm") version "1.6.10"
     `java-library`
     `maven-publish`
 }
@@ -14,7 +14,7 @@ repositories {
     mavenCentral()
 }
 
-val kotestVersion = "5.0.0.M2"
+val kotestVersion = "5.0.3"
 
 dependencies {
     // Align versions of all Kotlin components
@@ -40,8 +40,8 @@ publishing {
 
 tasks.withType<KotlinCompile> {
     kotlinOptions {
-        freeCompilerArgs = listOf("-Xjsr305=strict")
-        jvmTarget = "11"
+        freeCompilerArgs = listOf("-Xjsr305=strict", "-Xjvm-default=enable")
+        jvmTarget = "17"
     }
 }
 
