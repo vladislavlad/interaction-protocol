@@ -8,13 +8,12 @@ plugins {
 
 group = "software.darkmatter"
 version = "0.0.1"
-java.sourceCompatibility = JavaVersion.VERSION_11
 
 repositories {
     mavenCentral()
 }
 
-val kotestVersion = "5.0.3"
+val kotestVersion = "5.1.0"
 
 dependencies {
     // Align versions of all Kotlin components
@@ -38,6 +37,11 @@ publishing {
     }
 }
 
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    withSourcesJar()
+}
+
 tasks.withType<KotlinCompile> {
     kotlinOptions {
         freeCompilerArgs = listOf("-Xjsr305=strict", "-Xjvm-default=enable")
@@ -46,7 +50,7 @@ tasks.withType<KotlinCompile> {
 }
 
 tasks.jar {
-    archiveBaseName.set("${rootProject.name}-${project.name}")
+    archiveClassifier.set("")
 }
 
 tasks.test {
